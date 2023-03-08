@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(58, 56, 88);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Div por id</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //Seleciona tag o parágrafo de número []
+        //var d = window.document.getElementById('msg') //Seleciona Div por ID
+        //p1.style.color = 'blue';
+        //corpo.style.background = 'black'
+        //window.document.write("Está escrito assim: " + p1.innerHTML) //Escreve o parágrafo do objeto p1 
+        //d.style.background = 'green'
+        //d.innerText = 'Estou aguardando'
+        //var e = window.document.getElementsByName('msg')[0] //Seleciona Div por Name
+        //e.innerText = 'Olá'
+        //var f = document.getElementsByClassName('msgcl')[0] //Por classe
+        //f.innerHTML('Olá')
+        var d = window.document.querySelector('div.msg') // seleciona por query # id ou . class
+        d.style.background = 'brown'
+        
+    </script>
+</body>
+</html>

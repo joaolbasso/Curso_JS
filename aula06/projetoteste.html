@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincando com letras e números</title>
+    <style>
+        h1 {
+            font: italic 32pt Baskerville;
+            color: rgb(0, 0, 0);
+            background-color: rgba(220, 20, 60, 0.411);
+        }
+
+        body {
+            background-color: rgba(100, 148, 237, 0.637);
+            color: rgb(73, 73, 73);
+            font: normal 21pt Times;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Brincando com letras e números</h1>
+    <p>Esse projeto é um teste com números e letras, 
+        manipulação de strings e numbers!!
+    </p>
+
+    <script>
+        var nome = window.prompt('Insira seu nome: ')
+        var idade = window.prompt('Insira sua idade: ')
+        var nacionalidade = window.prompt('Insira sua nacionalidade: ')
+        var salario = Number(window.prompt('Qual seu salario mensal atual?'))
+        var salarioAnual = salario * 12;
+        window.alert(`\tNome: ${nome} \n 
+                    Idade: ${idade} \n
+                    Nacionalidade: ${nacionalidade} \n
+                    Salário: ${salario} `)
+
+        window.alert('Seu nome em letras maiúsculas é ' + String(nome.toUpperCase()) + '\n' +
+        ' e tem ' + nome.length + ' letras' +  '\n' +
+        'Quando você tiver o dobro de sua vida você terá: ' + Number(idade)*2 + ' anos \n' + 
+        'Seu salário anual é de ' + salarioAnual.toLocaleString('pt-br', {style : 'currency', currency : 'BRL'})
+        )             
+
+    </script>
+</body>
+</html>

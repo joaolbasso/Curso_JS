@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Analisador de números (refeito)</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Número (entre 1 e 100): <input type="number" name="" id="fnum"> 
+                <input type="button" value="Adicionar" id="btnadiciona" onclick="adicionar()">
+            </p>
+        </div>
+        <div>
+            <p>
+                <select name="lista" id="selvet" size="6"></select>
+            </p>
+            <input type="button" value="Finalizar" id="btnfinaliza" onclick="finalizar()">
+            <p id="detalhes"></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; JoãoLeonardoBasso
+            <br>OBRIGADO GUANABARA PELOS ENSINAMENTOS EM JAVASCRIPT 👩‍💻 
+            <br>CURSO BÁSICO EM JAVASCRIPT FINALIZADO EM 10/01/2023
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

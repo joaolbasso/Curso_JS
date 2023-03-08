@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBAIXADA</title>
+    <style>
+        body {
+            background-color: rgba(92, 255, 92, 0.671);
+            color: black;
+        }
+
+        h1 {
+            color: yellow;
+            background-color: rgb(0, 255, 0);
+            margin-top: 35px;
+        }
+
+        div#res {
+            font: italic 50px Candara;
+            margin-left: 40px;
+            margin-top: 40px;
+            color: blue;
+           ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>EMBAIXADA BRASILEIRA</h1>
+
+    Você vive em que país?
+
+    <input type="text" id="txtpais">
+    <input type="button" value="Localizador" onclick="calcular()">
+    <div id="res"></div> 
+    <script>
+        function calcular () {
+        var txtp = window.document.querySelector('input#txtpais')
+        var pais = String(txtp.value).toUpperCase()
+        var res = window.document.querySelector('div#res')
+        if (pais == 'BRASIL') {
+            res.style.color = 'yellow'
+            res.innerHTML = `Então você é <strong>BRASILEIRO</strong> `
+            
+        } else {
+            res.style.color = 'blue'
+            res.innerHTML = `Então você é <strong>ESTRANGEIRO</strong>`
+        }
+    }
+    </script>
+</body>
+</html>

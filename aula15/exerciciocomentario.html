@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+</head>
+<style>
+    body {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    txt = "<h2>Ilustração de for in ATRAVÉS de um ARRAY:</h2>"
+
+    const numeros = [45, 4, 9, 16, 25]
+
+    for (let x in numeros) {
+        txt += `índice: ${x} | valor: ${numeros[x]} <br>`
+    }
+
+    /* Lê-se: PARA(for) cada POSIÇÃO(x) NO(in) ARRAY(numeros) {execute este bloco}
+
+    inseriu-se no 1° placeholder: a CHAVE(x);
+    Foi exibido: a CHAVE de CADA PROPRIEDADE do OBJETO.
+
+    PERCEBA: em ARRAYS, a CHAVE é o ÍNDICE de cada ELEMENTO (chave:valor == índice:valor).
+
+    inseriu-se no 2° placeholder: o ARRAY(numeros) na POSIÇÃO de x;
+    Foi exibido: o VALOR de CADA PROPRIEDADE do OBJETO. 
+    
+    LEMBRE-SE:
+    TODO ARRAY É UM OBJETO. MAS NÃO TODO OBJETO É UM ARRAY. */
+
+    //----------------------------------------
+
+    txt += "<h2>Ilustração de for in ATRAVÉS de um OBJETO:</h2>"
+
+    const pessoa = {nome: 'Elon', Snome: 'Musk', idade: 51}
+    
+    for (let x in pessoa) {
+        txt += `chave: ${x} | valor: ${pessoa[x]}<br>`
+    }
+
+    /* Lê-se: PARA(for) cada POSIÇÃO(x) NO(in) OBJETO(pessoa) {execute este bloco}
+
+    inseriu-se no 1° placeholder: a CHAVE(x);
+    Foi exibido: a CHAVE de CADA PROPRIEDADE do OBJETO.
+    
+    PERCEBA: em OBJETOS, a CHAVE é o NOME dado à cada PROPRIEDADE (chave:valor == nome:valor).
+
+    inseriu-se no 2° placeholder: o OBJETO(pessoa) na POSIÇÃO de x;
+    Foi exibido: o VALOR de CADA PROPRIEDADE do OBJETO. */
+
+    txt += "<br><strong>*posição == índice == chave == key</strong>"
+
+    document.getElementById('demo').innerHTML = txt
+</script>
+</html>

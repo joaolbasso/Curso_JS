@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativo</title>
+    <style>
+        body {
+            background-color: rgb(196, 170, 196); 
+        }
+        div#cx {
+            align-items: center;
+            align-content: center;
+            border-radius: 10px;
+            padding: 0px;
+            margin-left: 350px;
+            height: 600px;
+            width: 600px;
+            background-color: rgba(132, 19, 184, 0.527);
+        }
+        h1 {
+            font: bold 36px Arial;
+            text-align: center;
+            color: white;
+        }
+        p#hora {
+            text-align: center;
+            color: white;
+            font: normal 32px Candara;
+        }
+
+        input#atualiza {
+            background-color: plum;
+            color: rgb(0, 0, 0);
+            margin-left: 250px;
+            height: 70px;
+            width: 100px;
+        }
+
+        p#saud {
+            text-align: center;
+            color: white;
+            font: italic 46px Times;
+        }
+
+        p#dia {
+            font: bold 46px Arial;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="cx"><h1>Olá, sou seu assistente informativo</h1>
+        <input type="button" value="Atualiza" id="atualiza">
+        <p id="dia"></p>
+        <p id="hora"></p>
+        <p id="saud"></p>
+    </div>
+    
+    <script>
+        var act = window.document.querySelector('input#atualiza')
+        act.addEventListener('click', refresh)
+        function refresh() {
+        var agora = new Date()
+        var h, min, seg, diaSem
+        h = String(agora.getHours()) 
+        min = String(agora.getMinutes().toLocaleString('pt-br')) 
+        seg = String(agora.getSeconds())
+        diaSem = agora.getDay()
+        var body = window.document.getElementsByTagName('body')[0]
+        var dia = window.document.querySelector('p#dia') 
+        var mostrahora = window.document.querySelector('p#hora')
+        var psaud = window.document.getElementById('saud')
+        switch (diaSem) {
+            case 0:
+                dia.innerHTML = `Hoje é <strong>Domingo</strong>!`
+                break
+            case 1:
+                dia.innerHTML= `Hoje é <strong>Segunda-Feira</strong>!`
+                break
+            case 2:
+                dia.innerHTML = `Hoje é <strong>Terça-Feira</strong>!`
+                break
+            case 3:
+                dia.innerHTML = `Hoje é <strong>Quarta-Feira</strong>!`
+                break
+            case 4:
+                dia.innerHTML = `Hoje é <strong>Quinta-Feira</strong>!`
+                break             
+            case 5:
+                dia.innerHTML = `Hoje é <strong>Sexta-Feira</strong>!`
+                break
+            case 6:
+                dia.innerHTML = `Hoje é <strong>Sábado</strong>!`
+                break        
+        }
+        if (min < 10) {
+            min = `0${min}`
+        }
+        if (seg < 10) {
+            seg = `0${seg}`
+        }
+        mostrahora.innerHTML = `Agora são <strong>${h}:${min}:${seg}</strong>`
+        if (h<12) {
+            psaud.innerHTML = 'Tenha um <strong>Bom Dia</strong>!'
+            body.style.background = '#fdf6e3'
+        } else if (h<19) {
+            psaud.innerHTML = 'Tenha uma <strong>Boa Tarde</strong>!'
+            body.style.background = '#00A8FF'
+        } else {
+            psaud.innerHTML = 'Tenha uma <strong>Boa Noite</strong>!'
+            body.style.background = '#193d4b'
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARTÓRIO ELEITORAL</title>
+    <style>
+        body {
+            background-color: rgb(230, 228, 228);
+        }
+        input#txtidade {
+            margin-left: 85px;
+            margin-top: 10px;
+            width: 60px;
+            height: 40px;
+        }
+        div#res {
+            font: italic 38px Candara;
+            margin-top: 25px;
+        }
+
+        input#verifica {
+            align-content: center;
+            margin-left: 20px;
+        }
+
+        h2 {
+            font: bold 32px Times;
+            margin-left: 35px;
+            color:rgb(34, 143, 80);
+        }
+
+    </style>
+</head>
+<body>
+    <h2>QUAL A SUA IDADE?</h2>
+    <input type="number" name="txtidade" id="txtidade">
+    <input type="button" value="Verifica" id="verifica">
+    <div id="res"></div>
+    <script>
+        var a = window.document.getElementById('verifica')
+        a.addEventListener('click', click)
+        function click() {
+        var txti = window.document.querySelector('input#txtidade')
+        var idade = Number(txti.value)
+        var res = window.document.getElementById('res')
+        if (idade < 16) {
+            res.style.color = 'red'
+            res.innerHTML = `Você tem ${idade} anos, então <strong>NÃO VOTA</strong>`
+        } else if (idade < 18 || idade >= 60) {
+            res.style.color = 'purple'
+            res.innerHTML = `Você tem ${idade} anos, então <strong>VOTO OPCIONAL</strong>`
+        } else {
+            res.style.color = 'green'
+            res.innerHTML = `Você tem ${idade} anos, então <strong>VOTO OBRIGATÓRIO</strong>`
+        }
+    }
+    </script>
+</body>
+</html>

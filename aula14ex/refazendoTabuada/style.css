@@ -1,0 +1,41 @@
+body {
+    background-color: bisque;
+}
+
+header {
+    color:rgb(79, 150, 255);
+    text-align: center;
+    font: bold 32px BrockScript;
+}
+
+section {
+    background: white;
+    width: 500px;
+    margin: auto;
+    padding: 23px;
+    border-radius: 50px;
+    box-shadow: 1px 1.5px 4px blue ;
+}
+
+div#a {
+    text-align: center;
+}
+
+div#b {
+    text-align: center;
+}
+
+select#seltab {
+    margin-top: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+footer {
+    text-align: center;
+    color:rgb(79, 150, 255);
+    font-size: 28px;
+}
+
+
+
